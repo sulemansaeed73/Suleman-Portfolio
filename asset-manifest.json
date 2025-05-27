@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Suleman-Portfolio/static/css/main.925c4675.css",
+    "main.js": "/Suleman-Portfolio/static/js/main.8fb8a02e.js",
+    "static/js/415.fc063c41.chunk.js": "/Suleman-Portfolio/static/js/415.fc063c41.chunk.js",
+    "static/js/787.f6e65957.chunk.js": "/Suleman-Portfolio/static/js/787.f6e65957.chunk.js",
+    "index.html": "/Suleman-Portfolio/index.html",
+    "main.925c4675.css.map": "/Suleman-Portfolio/static/css/main.925c4675.css.map",
+    "main.8fb8a02e.js.map": "/Suleman-Portfolio/static/js/main.8fb8a02e.js.map",
+    "415.fc063c41.chunk.js.map": "/Suleman-Portfolio/static/js/415.fc063c41.chunk.js.map",
+    "787.f6e65957.chunk.js.map": "/Suleman-Portfolio/static/js/787.f6e65957.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.925c4675.css",
+    "static/js/main.8fb8a02e.js"
+  ]
+}
