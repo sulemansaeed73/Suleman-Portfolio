@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Suleman-Portfolio/static/css/main.925c4675.css",
-    "main.js": "/Suleman-Portfolio/static/js/main.6a3aa46d.js",
+    "main.css": "/Suleman-Portfolio/static/css/main.b0b1ac62.css",
+    "main.js": "/Suleman-Portfolio/static/js/main.004aff22.js",
     "static/js/415.4d6acbeb.chunk.js": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/HomePagePic.png": "/Suleman-Portfolio/static/media/HomePagePic.d905d58b10aaefb14dac.png",
@@ -46,22 +46,22 @@
     "static/media/GetHardMoneyPage11.png": "/Suleman-Portfolio/static/media/GetHardMoneyPage11.0cce961b33966dc5e4be.png",
     "static/media/Signup.png": "/Suleman-Portfolio/static/media/Signup.960f0ad2e80057a3410d.png",
     "static/media/GetHardMoneyPage4.png": "/Suleman-Portfolio/static/media/GetHardMoneyPage4.879dd100f8fb014f831f.png",
+    "static/media/homepage.jpg": "/Suleman-Portfolio/static/media/homepage.2650aa60a8e3bec32083.jpg",
     "static/media/EverytizePage12.png": "/Suleman-Portfolio/static/media/EverytizePage12.45c49b8822920540111a.png",
     "static/media/GetHardMoneyPage5.png": "/Suleman-Portfolio/static/media/GetHardMoneyPage5.65b3f647175892b12665.png",
     "static/media/Notifications.png": "/Suleman-Portfolio/static/media/Notifications.f88be2c23fdbae319801.png",
     "static/media/Chatbox.png": "/Suleman-Portfolio/static/media/Chatbox.6cb7ea90cb701b27a111.png",
     "static/media/AutoCadViewerPage6.png": "/Suleman-Portfolio/static/media/AutoCadViewerPage6.e4cf45b8d9bf41d0e3fc.png",
     "static/media/Login.png": "/Suleman-Portfolio/static/media/Login.05862a9b6c0df09a129e.png",
-    "static/media/avatar.svg": "/Suleman-Portfolio/static/media/avatar.5852f40fbb38aa284829fa3fb7722225.svg",
     "index.html": "/Suleman-Portfolio/index.html",
     "static/media/infinite-spinner.svg": "/Suleman-Portfolio/static/media/infinite-spinner.d19bff23406432f7411fa1d663bdfe15.svg",
-    "main.925c4675.css.map": "/Suleman-Portfolio/static/css/main.925c4675.css.map",
-    "main.6a3aa46d.js.map": "/Suleman-Portfolio/static/js/main.6a3aa46d.js.map",
+    "main.b0b1ac62.css.map": "/Suleman-Portfolio/static/css/main.b0b1ac62.css.map",
+    "main.004aff22.js.map": "/Suleman-Portfolio/static/js/main.004aff22.js.map",
     "415.4d6acbeb.chunk.js.map": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.925c4675.css",
-    "static/js/main.6a3aa46d.js"
+    "static/css/main.b0b1ac62.css",
+    "static/js/main.004aff22.js"
   ]
 }
