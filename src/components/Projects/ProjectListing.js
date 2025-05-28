@@ -70,6 +70,7 @@ export default function ProjectPage() {
       shortDescription: "Public (GitHub)",
       description:
         "3DModel Viewer is a web-based CAD file viewer developed using Next.js and Express, powered by the Autodesk Forge API. This application allows users to upload and visualize AutoCAD files in both 2D and 3D formats directly in the browser. Built for convenience and accessibility, users can manage their uploaded models and interact with them through rotation, zooming, and other navigation tools. It's an ideal tool for engineers, architects, or anyone needing quick, browser-based CAD file inspection.",
+      projectLink: "https://github.com/sulemansaeed73/NextJS-3DModelViewer",
       images: [
         require("../../images/AutoCadViewer/AutoCadViewerPage1.png"),
         require("../../images/AutoCadViewer/AutoCadViewerPage2.png"),
@@ -85,6 +86,7 @@ export default function ProjectPage() {
       shortDescription: "Client Project",
       description:
         "Tenancy Deposit Refund is a web application designed to streamline the process of managing tenancy deposits. Built with React.js and Express, this platform allows landlords and tenants to easily handle deposit refunds. Users can register, log in, and submit refund requests, which are then processed through a secure system. The application includes features for tracking the status of requests and ensuring compliance with tenancy laws, making it an essential tool for property management.",
+      projectLink: "https://www.tenancydepositrefund.co.uk/",
       images: [
         require("../../images/TenancyDepositRefund/tenancydepositrefundPage1.png"),
         require("../../images/TenancyDepositRefund/tenancydepositrefundPage2.png"),
@@ -134,46 +136,20 @@ export default function ProjectPage() {
             <span className="short-description">
               {project.shortDescription}
             </span>
+            {project.projectLink && (
+              <a
+                href={project.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                Visit Project
+              </a>
+            )}
             <p>{project.description}</p>
           </div>
         </div>
       ))}
     </div>
   );
-}
-
-{
-  /* <div className="flex justify-center">
-    <button
-      onClick={() => setLoadMore((prev) => !prev)}
-      className="mt-5 px-12 py-2.5 bg-blue-400 text-white rounded min-w-[180px]"
-    >
-      {!loadMore ? "Load More" : "Hide"}
-    </button>
-  </div> */
-}
-{
-  /* 
-  {loadMore && (
-    <div className="p-32">
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={20}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        className="w-full h-full"
-      >
-        {projects[0].images.map((src, idx) => (
-          <SwiperSlide key={idx}>
-            <img
-              src={src}
-              alt={`Slide ${idx}`}
-              className="w-full h-full object-cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  )} */
 }

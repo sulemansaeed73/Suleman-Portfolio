@@ -31,7 +31,7 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={require('../../images/avatar.svg')} className="img-fluid" alt="avatar" />
+              <img src={require('../../images/homepage.jpg')} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
