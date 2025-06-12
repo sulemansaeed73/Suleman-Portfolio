@@ -1,4 +1,4 @@
-import React from "react";
+import Tilt from "react-parallax-tilt";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
@@ -26,10 +26,12 @@ function About() {
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "10px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={require('../../images/HomePagePic.png')} alt="about" className="img-fluid" />
+            <Tilt>
+            <img src={require('../../images/MyAvatar.png')} alt="about" className="img-about" />
+            </Tilt>
           </Col>
         </Row>
         <h1 className="project-heading">
