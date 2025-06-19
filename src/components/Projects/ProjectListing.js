@@ -8,7 +8,7 @@ export default function ProjectPage() {
   const projects = [
     {
       name: "RetrieveMyItem",
-      shortDescription: "Private Project",
+      shortDescription: "Private",
       description:
         "RetrieveMyItem is a lost-and-found platform built using ReactJS and Laravel (MySQL). This application connects people who have lost items with those who have found them. Both item owners and finders can register their items along with detailed descriptions and photos. A robust search system makes it easy to filter and locate listings. When someone attempts to claim an item, they must first pass a validation quiz to prove ownership. The platform also includes a real-time chat feature, allowing verified users to communicate securely during the item recovery process.",
       images: [
@@ -27,7 +27,7 @@ export default function ProjectPage() {
     },
     {
       name: "Everytize",
-      shortDescription: "Private Project",
+      shortDescription: "Private",
       description:
         "Everytize is a local utility directory platform developed with the MERN stack (ReactJS, Tailwind CSS, Express, MongoDB). This website provides a convenient interface for users to discover essential local services such as restaurants, plumbers, electricians, and more. Each listing includes contact details, descriptions, and user-submitted reviews. It serves as a one-stop solution for finding trusted service providers within your area, while also giving businesses visibility in their local market.",
       images: [
@@ -48,10 +48,10 @@ export default function ProjectPage() {
     },
     {
       name: "GetHardMoney",
-      shortDescription: "Public Client Project",
+      shortDescription: "Client Project",
       description:
         "GetHardMoney is a modern lending platform built with Next.js and NestJS, tailored for loan providers and seekers in the U.S. This project facilitates direct interaction between lenders and borrowers. Users can register as either party, and borrowers can submit loan requests visible to registered lenders. The platform includes an interactive U.S. map to view all participating lenders by region. With a comprehensive user dashboard, both parties can track and manage their loan-related activities seamlessly.",
-       images: [
+      images: [
         require("../../images/GetHardMoney/GetHardMoneyPage1.png"),
         require("../../images/GetHardMoney/GetHardMoneyPage2.png"),
         require("../../images/GetHardMoney/GetHardMoneyPage3.png"),
@@ -94,13 +94,21 @@ export default function ProjectPage() {
         require("../../images/TenancyDepositRefund/tenancydepositrefundPage4.png"),
       ],
     },
-    // {
-    //   name: "WritingChecker",
-    //   shortDescription: "Private Project",
-    //   description:
-    //     "WritingChecker is a writing assistance platform built with Next.js and Django. This application enables users to upload text documents and receive grammar checks, paraphrasing suggestions, and clarity improvements. It supports account creation and login features for saving writing history and results. Designed with user privacy and performance in mind, WritingChecker is a helpful tool for students, writers, and professionals looking to polish their content.",
-    //   images: ["/img/sample.png", "/img/sample.png", "/img/sample.png"],
-    // },
+    {
+      name: "CleanseText",
+      shortDescription: "Public (GitHub)",
+      description:
+        "CleanseText is a writing assistance platform built with Next.js and Django. This application enables users to upload text documents and receive grammar checks, summarization and paraphrasing suggestions. It supports account creation and login features. CleanseText is a helpful tool for students, writers, and professionals looking to polish their content.",
+      projectLink: "https://github.com/sulemansaeed73/huggingface-model/",
+      images: [
+        require("../../images/CleanseText/Login.png"),
+        require("../../images/CleanseText/Signup.png"),
+        require("../../images/CleanseText/Profile.png"),
+        require("../../images/CleanseText/Contact.png"),
+        require("../../images/CleanseText/Dashboard.png"),
+        require("../../images/CleanseText/HomePage.png"),
+      ],
+    },
   ];
 
   return (
