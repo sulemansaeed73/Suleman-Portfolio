@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Suleman-Portfolio/static/css/main.84ba64d6.css",
-    "main.js": "/Suleman-Portfolio/static/js/main.75cd0a79.js",
+    "main.js": "/Suleman-Portfolio/static/js/main.c796c0a8.js",
     "static/js/415.4d6acbeb.chunk.js": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/MyAvatar.png": "/Suleman-Portfolio/static/media/MyAvatar.c0bbd1b0840440a6a5a6.png",
@@ -47,21 +47,25 @@
     "static/media/GetHardMoneyPage11.png": "/Suleman-Portfolio/static/media/GetHardMoneyPage11.0cce961b33966dc5e4be.png",
     "static/media/EverytizePage12.png": "/Suleman-Portfolio/static/media/EverytizePage12.45c49b8822920540111a.png",
     "static/media/GetHardMoneyPage5.png": "/Suleman-Portfolio/static/media/GetHardMoneyPage5.65b3f647175892b12665.png",
+    "static/media/Contact.png": "/Suleman-Portfolio/static/media/Contact.fcaabaa7d77bbb5c46d0.png",
     "static/media/Notifications.png": "/Suleman-Portfolio/static/media/Notifications.f88be2c23fdbae319801.png",
+    "static/media/HomePage.png": "/Suleman-Portfolio/static/media/HomePage.64254c968213eef45284.png",
     "static/media/Chatbox.png": "/Suleman-Portfolio/static/media/Chatbox.6cb7ea90cb701b27a111.png",
     "static/media/uploaditem.png": "/Suleman-Portfolio/static/media/uploaditem.aa27096df1ecd3c1c82b.png",
-    "static/media/Signup.png": "/Suleman-Portfolio/static/media/Signup.0485ce52a72466c31827.png",
+    "static/media/Signup.png": "/Suleman-Portfolio/static/media/Signup.b884d22d9f677f033898.png",
     "static/media/AutoCadViewerPage6.png": "/Suleman-Portfolio/static/media/AutoCadViewerPage6.e4cf45b8d9bf41d0e3fc.png",
-    "static/media/Login.png": "/Suleman-Portfolio/static/media/Login.31ea0068e0dd040072cf.png",
+    "static/media/Dashboard.png": "/Suleman-Portfolio/static/media/Dashboard.067445d47584ef500a75.png",
+    "static/media/Login.png": "/Suleman-Portfolio/static/media/Login.ad01fb1bb1aee000801c.png",
+    "static/media/Profile.png": "/Suleman-Portfolio/static/media/Profile.88598ec0a5bb0b2583d0.png",
     "index.html": "/Suleman-Portfolio/index.html",
     "static/media/infinite-spinner.svg": "/Suleman-Portfolio/static/media/infinite-spinner.d19bff23406432f7411fa1d663bdfe15.svg",
     "main.84ba64d6.css.map": "/Suleman-Portfolio/static/css/main.84ba64d6.css.map",
-    "main.75cd0a79.js.map": "/Suleman-Portfolio/static/js/main.75cd0a79.js.map",
+    "main.c796c0a8.js.map": "/Suleman-Portfolio/static/js/main.c796c0a8.js.map",
     "415.4d6acbeb.chunk.js.map": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84ba64d6.css",
-    "static/js/main.75cd0a79.js"
+    "static/js/main.c796c0a8.js"
   ]
 }
