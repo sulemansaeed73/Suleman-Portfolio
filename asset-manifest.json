@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Suleman-Portfolio/static/css/main.84ba64d6.css",
-    "main.js": "/Suleman-Portfolio/static/js/main.c7be3c13.js",
+    "main.js": "/Suleman-Portfolio/static/js/main.da9537e4.js",
     "static/js/415.4d6acbeb.chunk.js": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/MyAvatar.png": "/Suleman-Portfolio/static/media/MyAvatar.c0bbd1b0840440a6a5a6.png",
@@ -72,12 +72,12 @@
     "index.html": "/Suleman-Portfolio/index.html",
     "static/media/infinite-spinner.svg": "/Suleman-Portfolio/static/media/infinite-spinner.d19bff23406432f7411fa1d663bdfe15.svg",
     "main.84ba64d6.css.map": "/Suleman-Portfolio/static/css/main.84ba64d6.css.map",
-    "main.c7be3c13.js.map": "/Suleman-Portfolio/static/js/main.c7be3c13.js.map",
+    "main.da9537e4.js.map": "/Suleman-Portfolio/static/js/main.da9537e4.js.map",
     "415.4d6acbeb.chunk.js.map": "/Suleman-Portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/Suleman-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84ba64d6.css",
-    "static/js/main.c7be3c13.js"
+    "static/js/main.da9537e4.js"
   ]
 }
