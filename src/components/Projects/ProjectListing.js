@@ -83,6 +83,21 @@ export default function ProjectPage() {
         require("../../images/RetrieveMyItem/Services.png"),
       ],
     },
+        {
+      name: "I-Hostel - Hostel Management System",
+      shortDescription: "Public (GitHub)",
+      description:
+        "I-Hostel is a hostel management system built using Laravel Framework with MySQL Database. This application connects hostel owners with potential tenants. Hostel owners can register their properties along with detailed descriptions and photos. A robust search system makes it easy to filter and locate listings. The platform also includes a real-time notification feature, allowing users to be immediately notified during process.",
+      projectLink: "https://github.com/sulemansaeed73/I-Hostel-Management-System",
+        images: [
+        require("../../images/HostelManagementSystem/Signup.png"),
+        require("../../images/HostelManagementSystem/Login.png"),
+        require("../../images/HostelManagementSystem/Menu.png"),
+        require("../../images/HostelManagementSystem/Users.png"),
+        require("../../images/HostelManagementSystem/Update.png"),
+        require("../../images/HostelManagementSystem/List.png"),
+      ],
+    },
     {
       name: "Everytize - Local Utility Directory",
       shortDescription: "Private",
