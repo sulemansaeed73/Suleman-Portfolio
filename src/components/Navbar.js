@@ -9,6 +9,9 @@ import {
   AiOutlineUser,
   AiOutlineMail,
 } from "react-icons/ai";
+import { FaCertificate } from "react-icons/fa";
+
+// added certificates link (icon added)
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -83,6 +86,16 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/certificates"
+                onClick={() => updateExpanded(false)}
+              >
+                <FaCertificate style={{ marginBottom: "2px" }} /> Certificates
               </Nav.Link>
             </Nav.Item>
           </Nav>

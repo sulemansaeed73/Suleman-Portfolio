@@ -168,6 +168,9 @@ export default function ProjectPage() {
 
   return (
     <div className="project-page">
+       <h1 className="project-heading">
+              My <strong className="purple">Projects</strong>
+            </h1>
       {projects.map((project, index) => (
         <div
           key={index}
