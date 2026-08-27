@@ -50,7 +50,8 @@ function Particle() {
       }}
       style={{
         position: "fixed",
-        zIndex: 0,
+        zIndex: -1,
+        pointerEvents: "none",
       }}
     />
   );

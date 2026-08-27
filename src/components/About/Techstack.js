@@ -5,14 +5,13 @@ import {
   DiReact,
   DiNodejs,
   DiMongodb,
-  DiPython,
 } from "react-icons/di";
 import {
-  SiFirebase,
   SiNextdotjs,
-  SiPostgresql,
   SiLaravel,
   SiDjango,
+  SiAmazonaws,
+  SiNuxtdotjs,
 } from "react-icons/si";
 
 function Techstack() {
@@ -22,9 +21,8 @@ function Techstack() {
     { icon: <DiReact />, name: "React" },
     { icon: <DiMongodb />, name: "MongoDB" },
     { icon: <SiNextdotjs />, name: "Next.js" },
-    // { icon: <SiFirebase />, name: "Firebase" },
-    // { icon: <SiPostgresql />, name: "PostgreSQL" },
-    // { icon: <DiPython />, name: "Python" },
+    { icon: <SiNuxtdotjs />, name: "Nuxt (Vue)" },
+    { icon: <SiAmazonaws />, name: "AWS" },
     { icon: <SiLaravel />, name: "Laravel" },
     { icon: <SiDjango />, name: "Django" },
   ];
@@ -42,3 +40,4 @@ function Techstack() {
 }
 
 export default Techstack;
+

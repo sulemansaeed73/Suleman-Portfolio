@@ -10,8 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             My Name is <span className="purple">Suleman Saeed </span>
             <br /> I am a graduate with a Bachelor of Science in Software Engineering from the University of Central Punjab. 
-            I am proficient in multiple programming languages and frameworks, including React, Next.js, Laravel, Django 
-            and MERN Stack.
+            I am proficient in multiple programming languages and frameworks, including React, Next.js, Nuxt (Vue), Laravel, Django, AWS, and the MERN Stack.
             <br />
             I am passionate about creating efficient and responsive web applications and excited to find opportunities 
             to contribute my skills to innovative projects.

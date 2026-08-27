@@ -1,18 +1,57 @@
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import {
+  FiExternalLink,
+  FiGithub,
+  FiMaximize2,
+  FiX,
+  FiCheckCircle,
+} from "react-icons/fi";
 
 export default function ProjectPage() {
+  const [lightboxImage, setLightboxImage] = useState(null);
+
   const projects = [
-    
-     {
-      name: "GetHardMoney - U.S. Lending Platform",
-      shortDescription: "Client Project",
-      projectLink: "https://gethardmoney.com/",
+    {
+      id: 1,
+      name: "NoxVenues - Event & Venue Booking Platform",
+      category: "client",
+      badgeText: "Client Project",
+      projectLink: "https://noxvenues.com/",
+      tags: [
+        "Next.js",
+        "AWS Lightsail",
+        "AWS S3",
+        "SEO Optimization",
+        "Speed Optimization",
+        "Cloud Architecture",
+      ],
       description:
-        "GetHardMoney is a U.S. lending platform built with Next.js, NestJS, and PostgreSQL. The platform supports lenders, borrowers, brokers, investors, and insurance providers. Borrowers and brokers can submit loan requests visible to lenders, while an interactive U.S. map helps users explore lenders by region. Investors can secure property insurance by submitting details once and receiving quotes from multiple providers. Key features include a comprehensive dashboard, real-time chat, and Stripe integration, ensuring seamless communication, payments, and activity management across all user types.",
+        "NoxVenues is an event and venue booking platform in Saudi Arabia, built with Next.js, optimized for maximum SEO visibility and performance. Configured and hosted on AWS Lightsail with heavy media and asset storage integrated on AWS S3 for fast, scalable delivery.",
+      images: [
+        require("../../images/NoxVenues/NoxVenues.png"),
+      ],
+    },
+    {
+      id: 2,
+      name: "GetHardMoney - U.S. Lending Platform",
+      category: "client",
+      badgeText: "Client Project",
+      projectLink: "https://gethardmoney.com/",
+      tags: [
+        "Next.js",
+        "NestJS",
+        "PostgreSQL",
+        "Stripe",
+        "Real-Time Chat",
+        "Interactive Map",
+      ],
+      description:
+        "GetHardMoney is a U.S. lending platform built with Next.js, NestJS, and PostgreSQL. The platform supports lenders, borrowers, brokers, investors, and insurance providers. Borrowers and brokers can submit loan requests visible to lenders, while an interactive U.S. map helps users explore lenders by region. Investors can secure property insurance by submitting details once and receiving quotes from multiple providers. Key features include a comprehensive dashboard, real-time chat, and Stripe integration.",
       images: [
         require("../../images/GetHardMoney/GetHardMoney(1).png"),
         require("../../images/GetHardMoney/GetHardMoney(2).png"),
@@ -23,12 +62,23 @@ export default function ProjectPage() {
         require("../../images/GetHardMoney/GetHardMoney(7).png"),
       ],
     },
-     {
+    {
+      id: 2,
       name: "InnerLight - Health & Wellness Platform",
-      shortDescription: "Client Project",
+      category: "client",
+      badgeText: "Client Project",
       projectLink: "https://innerlightacademy.en/",
+      tags: [
+        "MERN Stack",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Zoom API",
+        "WhatsApp Integration",
+      ],
       description:
-       "InnerLight is built with MERN Stack, featuring APIs for the Admin Panel and Mobile Application. The platform provides services such as training courses, meditation and breathwork sessions (recorded & live), private sessions (online & physical), retreats, and free webinars. The platform is designed for users, healers, instructors, and a web admin. Users can register and subscribe to their choice of courses, sessions, etc. For live offerings (courses, meditation, or breathwork), users receive a Zoom meeting link via WhatsApp to join the session.",
+        "InnerLight is built with the MERN Stack, featuring APIs for the Admin Panel and Mobile Application. The platform provides services such as training courses, meditation and breathwork sessions (recorded & live), private sessions (online & physical), retreats, and free webinars. Designed for users, healers, instructors, and web admin. Users can register and subscribe to live offerings and receive Zoom meeting links directly via WhatsApp.",
       images: [
         require("../../images/InnerLight/InnerLight (1).png"),
         require("../../images/InnerLight/InnerLight (2).png"),
@@ -36,12 +86,22 @@ export default function ProjectPage() {
         require("../../images/InnerLight/InnerLight (4).png"),
       ],
     },
-         {
+    {
+      id: 3,
       name: "TheCareMd - Telemedicine Platform",
-      shortDescription: "Client Project",
+      category: "client",
+      badgeText: "Client Project",
       projectLink: "https://thecaremd.com/",
+      tags: [
+        "Next.js",
+        "Express",
+        "Node.js",
+        "LegitScript Certified",
+        "Telehealth Portal",
+        "Stripe",
+      ],
       description:
-        "The CareMD is a telemedicine platform built with Next.js and Express, connecting patients with licensed U.S. healthcare providers for remote consultations. Patients can schedule appointments, receive online prescriptions, and access lab tests online, while providers can manage patient care efficiently through a centralized dashboard. The platform prioritizes affordability and security with LegitScript certification, ensuring the protection of patient data.",
+        "The CareMD is a telemedicine platform built with Next.js and Express, connecting patients with licensed U.S. healthcare providers for remote consultations. Patients can schedule appointments, receive online prescriptions, and access lab tests online, while providers manage patient care efficiently through a centralized dashboard. LegitScript certified for data security.",
       images: [
         require("../../images/CareMD/CareMD.png"),
         require("../../images/CareMD/CareMD (1).png"),
@@ -49,12 +109,15 @@ export default function ProjectPage() {
         require("../../images/CareMD/CareMD (3).png"),
       ],
     },
-         {
+    {
+      id: 4,
       name: "BlockWire - Press Release Distribution Platform",
-      shortDescription: "Client Project",
+      category: "client",
+      badgeText: "Client Project",
       projectLink: "https://press.block-wire.com/",
+      tags: ["React", "Node.js", "PostgreSQL", "Firebase Auth", "Media Publishing"],
       description:
-        "BlockWire is a platform for creating and distributing press releases, built in React, Node.js, and PostgreSQL, with Firebase authentication for secure user access. Users can create, edit, and manage press releases, track submissions, and share content with a wider audience. The platform provides a clean, user-friendly interface for managing media content efficiently.",
+        "BlockWire is a media distribution platform for creating and distributing press releases, built with React, Node.js, and PostgreSQL, using Firebase authentication for secure access. Users can create, edit, track submissions, and publish media content with high reach and performance analytics.",
       images: [
         require("../../images/BlockWire/BlockWire (1).png"),
         require("../../images/BlockWire/BlockWire (2).png"),
@@ -62,13 +125,21 @@ export default function ProjectPage() {
         require("../../images/BlockWire/BlockWire (4).png"),
       ],
     },
-    
     {
-      name: "RetrieveMyItem - Lost and Found Platform",
-      shortDescription: "Private",
-       projectLink: "https://retrievemyitem.web.app/",
+      id: 5,
+      name: "RetrieveMyItem - Lost & Found Platform",
+      category: "fullstack",
+      badgeText: "Full-Stack Web App",
+      projectLink: "https://retrievemyitem.web.app/",
+      tags: [
+        "ReactJS",
+        "Laravel",
+        "MySQL",
+        "Ownership Quiz Verification",
+        "Real-Time Chat",
+      ],
       description:
-        "RetrieveMyItem is a lost-and-found platform built using ReactJS and Laravel (MySQL). This application connects people who have lost items with those who have found them. Both item owners and finders can register their items along with detailed descriptions and photos. A robust search system makes it easy to filter and locate listings. When someone attempts to claim an item, they must first pass a validation quiz to prove ownership. The platform also includes a real-time chat feature, allowing verified users to communicate securely during the item recovery process.",
+        "RetrieveMyItem connects people who have lost items with those who found them. Both owners and finders register item listings with photos. Features a search filtering system, an ownership validation quiz to prevent fraud, and secure real-time chat between verified users.",
       images: [
         require("../../images/RetrieveMyItem/HomePage1.png"),
         require("../../images/RetrieveMyItem/Signup.png"),
@@ -83,13 +154,23 @@ export default function ProjectPage() {
         require("../../images/RetrieveMyItem/Services.png"),
       ],
     },
-        {
+    {
+      id: 6,
       name: "I-Hostel - Hostel Management System",
-      shortDescription: "Public (GitHub)",
+      category: "opensource",
+      badgeText: "Open Source",
+      githubLink:
+        "https://github.com/sulemansaeed73/I-Hostel-Management-System",
+      tags: [
+        "Laravel Framework",
+        "PHP",
+        "MySQL",
+        "Real-Time Notifications",
+        "Property Listings",
+      ],
       description:
-        "I-Hostel is a hostel management system built using Laravel Framework with MySQL Database. This application connects hostel owners with potential tenants. Hostel owners can register their properties along with detailed descriptions and photos. A robust search system makes it easy to filter and locate listings. The platform also includes a real-time notification feature, allowing users to be immediately notified during process.",
-      projectLink: "https://github.com/sulemansaeed73/I-Hostel-Management-System",
-        images: [
+        "I-Hostel is a comprehensive hostel management system connecting property owners with tenants. Owners showcase properties with photo galleries, amenities, and room availability. Includes filter search and instantaneous push notifications.",
+      images: [
         require("../../images/HostelManagementSystem/Signup.png"),
         require("../../images/HostelManagementSystem/Login.png"),
         require("../../images/HostelManagementSystem/Menu.png"),
@@ -99,10 +180,20 @@ export default function ProjectPage() {
       ],
     },
     {
+      id: 7,
       name: "Everytize - Local Utility Directory",
-      shortDescription: "Private",
+      category: "fullstack",
+      badgeText: "Full-Stack Directory",
+      tags: [
+        "MERN Stack",
+        "ReactJS",
+        "Tailwind CSS",
+        "Express",
+        "MongoDB",
+        "Geolocation Search",
+      ],
       description:
-        "Everytize is a local utility directory platform developed with the MERN stack (ReactJS, Tailwind CSS, Express, MongoDB). This website provides a convenient interface for users to discover essential local services such as restaurants, plumbers, electricians, and more. Each listing includes contact details, descriptions, and user-submitted reviews. It serves as a one-stop solution for finding trusted service providers within your area, while also giving businesses visibility in their local market.",
+        "Everytize is a local directory web application for discovering essential services (electricians, plumbers, local restaurants). Features listing management, interactive map views, user review ratings, and business visibility tools.",
       images: [
         require("../../images/Everytize/EverytizePage1.png"),
         require("../../images/Everytize/EverytizePage2.png"),
@@ -119,13 +210,21 @@ export default function ProjectPage() {
         require("../../images/Everytize/EverytizePage13.png"),
       ],
     },
-   
     {
+      id: 8,
       name: "3DModel Viewer - CAD File Viewer",
-      shortDescription: "Public (GitHub)",
+      category: "opensource",
+      badgeText: "Open Source",
+      githubLink: "https://github.com/sulemansaeed73/NextJS-3DModelViewer",
+      tags: [
+        "Next.js",
+        "Express",
+        "Autodesk Forge API",
+        "3D/2D CAD Engine",
+        "Three.js",
+      ],
       description:
-        "3DModel Viewer is a web-based CAD file viewer developed using Next.js and Express, powered by the Autodesk Forge API. This application allows users to upload and visualize AutoCAD files in both 2D and 3D formats directly in the browser. Built for convenience and accessibility, users can manage their uploaded models and interact with them through rotation, zooming, and other navigation tools. It's an ideal tool for engineers, architects, or anyone needing quick, browser-based CAD file inspection.",
-      projectLink: "https://github.com/sulemansaeed73/NextJS-3DModelViewer",
+        "A browser-based CAD file viewer powered by Next.js and the Autodesk Forge API. Enables engineers and architects to upload, inspect, rotate, and measure 2D and 3D AutoCAD drawings directly in the browser without plugins.",
       images: [
         require("../../images/AutoCadViewer/AutoCadViewerPage1.png"),
         require("../../images/AutoCadViewer/AutoCadViewerPage2.png"),
@@ -137,11 +236,20 @@ export default function ProjectPage() {
       ],
     },
     {
+      id: 9,
       name: "Tenancy Deposit Refund - Property Management Tool",
-      shortDescription: "Client Project",
-      description:
-        "Tenancy Deposit Refund is a web application designed to streamline the process of managing tenancy deposits. Built with React.js and Express, this platform allows landlords and tenants to easily handle deposit refunds. Users can register, log in, and submit refund requests, which are then processed through a secure system. The application includes features for tracking the status of requests and ensuring compliance with tenancy laws, making it an essential tool for property management.",
+      category: "client",
+      badgeText: "Client Project",
       projectLink: "https://www.tenancydepositrefund.co.uk/",
+      tags: [
+        "React.js",
+        "Express",
+        "Node.js",
+        "Property Management",
+        "Legal Compliance",
+      ],
+      description:
+        "Web application streamlining tenancy deposit management for UK landlords and tenants. Provides automated refund tracking, dispute resolution workflows, and legal compliance checks.",
       images: [
         require("../../images/TenancyDepositRefund/tenancydepositrefundPage1.png"),
         require("../../images/TenancyDepositRefund/tenancydepositrefundPage2.png"),
@@ -150,11 +258,20 @@ export default function ProjectPage() {
       ],
     },
     {
+      id: 10,
       name: "CleanseText - Writing Assistance Platform",
-      shortDescription: "Public (GitHub)",
+      category: "opensource",
+      badgeText: "Open Source",
+      githubLink: "https://github.com/sulemansaeed73/huggingface-model/",
+      tags: [
+        "Next.js",
+        "Django",
+        "Python",
+        "Hugging Face AI",
+        "NLP Summarization",
+      ],
       description:
-        "CleanseText is a writing assistance platform built with Next.js and Django. This application enables users to upload text documents and receive grammar checks, summarization and paraphrasing suggestions. It supports account creation and login features. CleanseText is a helpful tool for students, writers, and professionals looking to polish their content.",
-      projectLink: "https://github.com/sulemansaeed73/huggingface-model/",
+        "AI writing assistance tool built with Next.js and Django. Integrates Hugging Face NLP models to perform real-time grammar checks, text summarization, paraphrasing, and document clarity scoring.",
       images: [
         require("../../images/CleanseText/Login.png"),
         require("../../images/CleanseText/Signup.png"),
@@ -167,55 +284,159 @@ export default function ProjectPage() {
   ];
 
   return (
-    <div className="project-page">
-       <h1 className="project-heading">
-              My <strong className="purple">Projects</strong>
-            </h1>
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className={`project-item ${index % 2 === 1 ? "reverse" : ""}`}
-        >
-          <div className="project-images">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="swiper-wrapper"
-            >
-              {project.images.map((src, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    src={src}
-                    alt={`Slide ${idx}`}
-                    className="project-image"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+    <div className="project-page-wrapper">
+      {/* Hero Header Section */}
+      <div className="project-hero-header">
+        <h1 className="project-heading">
+          Featured <strong className="purple">Projects</strong>
+        </h1>
+        <p className="project-subtext">
+          Explore production client platforms, full-stack applications, and open-source contributions.
+        </p>
 
-          <div className="project-text">
-            <h2>{project.name}</h2>
-            <span className="short-description">
-              {project.shortDescription}
-            </span>
-            {project.projectLink && (
-              <a
-                href={project.projectLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                Visit Project
-              </a>
-            )}
-            <p>{project.description}</p>
+        {/* Stats counter strip */}
+        <div className="project-stats-strip">
+          <div className="stat-item">
+            <span className="stat-num">11+</span>
+            <span className="stat-label">Projects</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-num">6+</span>
+            <span className="stat-label">Live Client Apps</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-num">100%</span>
+            <span className="stat-label">Full Stack Production</span>
           </div>
         </div>
-      ))}
+      </div>
+
+      {/* Projects Listing Grid / Stack */}
+      <div className="project-list-container">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className={`project-card-modern ${
+              index % 2 === 1 ? "reverse-layout" : ""
+            }`}
+          >
+            {/* Left/Right: Browser Window Mockup Frame */}
+            <div className="project-media-column">
+              <div className="browser-mockup-frame">
+                <div className="browser-header-bar">
+                  <div className="browser-controls">
+                    <span className="dot red" />
+                    <span className="dot yellow" />
+                    <span className="dot green" />
+                  </div>
+                  <div className="browser-address-bar">
+                    <span className="address-url">
+                      {project.projectLink || project.githubLink || "https://localhost:3000"}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="browser-content-area">
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="custom-swiper"
+                  >
+                    {project.images.map((src, idx) => (
+                      <SwiperSlide key={idx}>
+                        <div className="swiper-slide-container">
+                          <img
+                            src={src}
+                            alt={`${project.name} slide ${idx + 1}`}
+                            className="project-slide-image"
+                          />
+                          <button
+                            className="image-expand-btn"
+                            title="Expand preview"
+                            onClick={() => setLightboxImage(src)}
+                          >
+                            <FiMaximize2 />
+                          </button>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+            </div>
+
+            {/* Right/Left: Project Details */}
+            <div className="project-info-column">
+              <div className="project-meta-top">
+                <span className={`project-category-badge ${project.category}`}>
+                  <FiCheckCircle className="badge-icon" /> {project.badgeText}
+                </span>
+              </div>
+
+              <h2 className="project-title">{project.name}</h2>
+
+              <p className="project-desc">{project.description}</p>
+
+              {/* Tech Stack Pills */}
+              <div className="tech-stack-container">
+                <span className="tech-stack-label">Tech Stack:</span>
+                <div className="tech-tag-list">
+                  {project.tags.map((tag, tagIdx) => (
+                    <span key={tagIdx} className="tech-tag-pill">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="project-actions">
+                {project.projectLink && (
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-btn btn-visit"
+                  >
+                    <FiExternalLink /> Visit Live Site
+                  </a>
+                )}
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-btn btn-github"
+                  >
+                    <FiGithub /> View Repository
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Lightbox Image Preview Modal */}
+      {lightboxImage && (
+        <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="lightbox-close-btn"
+              onClick={() => setLightboxImage(null)}
+            >
+              <FiX />
+            </button>
+            <img src={lightboxImage} alt="Project Screenshot Preview" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
