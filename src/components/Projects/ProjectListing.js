@@ -4,6 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FiExternalLink,
   FiGithub,
@@ -11,6 +12,10 @@ import {
   FiX,
   FiCheckCircle,
 } from "react-icons/fi";
+import {
+  fadeInUp,
+  staggerContainer,
+} from "../Motion/MotionVariants";
 
 export default function ProjectPage() {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -286,16 +291,21 @@ export default function ProjectPage() {
   return (
     <div className="project-page-wrapper">
       {/* Hero Header Section */}
-      <div className="project-hero-header">
-        <h1 className="project-heading">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer(0.12, 0.1)}
+        className="project-hero-header"
+      >
+        <motion.h1 variants={fadeInUp} className="project-heading">
           Featured <strong className="purple">Projects</strong>
-        </h1>
-        <p className="project-subtext">
+        </motion.h1>
+        <motion.p variants={fadeInUp} className="project-subtext">
           Explore production client platforms, full-stack applications, and open-source contributions.
-        </p>
+        </motion.p>
 
         {/* Stats counter strip */}
-        <div className="project-stats-strip">
+        <motion.div variants={fadeInUp} className="project-stats-strip">
           <div className="stat-item">
             <span className="stat-num">11+</span>
             <span className="stat-label">Projects</span>
@@ -310,14 +320,19 @@ export default function ProjectPage() {
             <span className="stat-num">100%</span>
             <span className="stat-label">Full Stack Production</span>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Projects Listing Grid / Stack */}
       <div className="project-list-container">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={project.id}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.12 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -6 }}
             className={`project-card-modern ${
               index % 2 === 1 ? "reverse-layout" : ""
             }`}
@@ -355,13 +370,15 @@ export default function ProjectPage() {
                             alt={`${project.name} slide ${idx + 1}`}
                             className="project-slide-image"
                           />
-                          <button
+                          <motion.button
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
                             className="image-expand-btn"
                             title="Expand preview"
                             onClick={() => setLightboxImage(src)}
                           >
                             <FiMaximize2 />
-                          </button>
+                          </motion.button>
                         </div>
                       </SwiperSlide>
                     ))}
@@ -387,9 +404,13 @@ export default function ProjectPage() {
                 <span className="tech-stack-label">Tech Stack:</span>
                 <div className="tech-tag-list">
                   {project.tags.map((tag, tagIdx) => (
-                    <span key={tagIdx} className="tech-tag-pill">
+                    <motion.span
+                      key={tagIdx}
+                      whileHover={{ y: -2, scale: 1.08 }}
+                      className="tech-tag-pill"
+                    >
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -397,45 +418,67 @@ export default function ProjectPage() {
               {/* Action Buttons */}
               <div className="project-actions">
                 {project.projectLink && (
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
                     href={project.projectLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="action-btn btn-visit"
                   >
                     <FiExternalLink /> Visit Live Site
-                  </a>
+                  </motion.a>
                 )}
                 {project.githubLink && (
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="action-btn btn-github"
                   >
                     <FiGithub /> View Repository
-                  </a>
+                  </motion.a>
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Lightbox Image Preview Modal */}
-      {lightboxImage && (
-        <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="lightbox-close-btn"
-              onClick={() => setLightboxImage(null)}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="lightbox-overlay"
+            onClick={() => setLightboxImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              className="lightbox-content"
+              onClick={(e) => e.stopPropagation()}
             >
-              <FiX />
-            </button>
-            <img src={lightboxImage} alt="Project Screenshot Preview" />
-          </div>
-        </div>
-      )}
+              <button
+                className="lightbox-close-btn"
+                onClick={() => setLightboxImage(null)}
+              >
+                <FiX />
+              </button>
+              <img src={lightboxImage} alt="Project Screenshot Preview" />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { motion } from "framer-motion";
 import {
   DiJavascript1,
   DiReact,
@@ -13,6 +14,7 @@ import {
   SiAmazonaws,
   SiNuxtdotjs,
 } from "react-icons/si";
+import { staggerContainer, popScale } from "../Motion/MotionVariants";
 
 function Techstack() {
   const techs = [
@@ -28,16 +30,45 @@ function Techstack() {
   ];
 
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {techs.map((tech, index) => (
-        <Col xs={4} md={2} className="tech-icons" key={index}>
-          {tech.icon}
-          <p style={{ marginTop: "10px", fontSize: "14px" }}>{tech.name}</p>
-        </Col>
-      ))}
-    </Row>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={staggerContainer(0.08, 0.1)}
+    >
+      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        {techs.map((tech, index) => (
+          <Col xs={4} md={2} className="tech-icons" key={index} style={{ padding: "10px" }}>
+            <motion.div
+              variants={popScale}
+              whileHover={{
+                y: -8,
+                scale: 1.12,
+                rotate: index % 2 === 0 ? 3 : -3,
+                borderColor: "#1e90ff",
+                boxShadow: "0 10px 25px rgba(30, 144, 255, 0.45)",
+              }}
+              whileTap={{ scale: 0.94 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              style={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              {tech.icon}
+              <p style={{ marginTop: "10px", fontSize: "14px", marginBottom: 0 }}>
+                {tech.name}
+              </p>
+            </motion.div>
+          </Col>
+        ))}
+      </Row>
+    </motion.div>
   );
 }
 
 export default Techstack;
-

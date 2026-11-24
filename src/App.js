@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import CertificatesPage from "./components/CertificatesPage/CertificatesPage";
+import ScrollProgress from "./components/Motion/ScrollProgress";
 
 import {
   HashRouter as Router,
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollProgress />
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />

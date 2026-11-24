@@ -1,4 +1,13 @@
+import React from "react";
 import { Container } from "react-bootstrap";
+import { motion } from "framer-motion";
+import Particle from "../Particle";
+import Reveal from "../Motion/Reveal";
+import {
+  fadeInUp,
+  staggerContainer,
+  popScale,
+} from "../Motion/MotionVariants";
 
 const certificates = [
   {
@@ -57,7 +66,7 @@ const certificates = [
     img: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UFLRM9VH78AI/CERTIFICATE_LANDING_PAGE~UFLRM9VH78AI.jpeg",
     link: "https://coursera.org/verify/UFLRM9VH78AI",
   },
-    {
+  {
     id: 9,
     title: "Microsoft Power Platform Fundamentals",
     issuer: "Microsoft",
@@ -103,44 +112,65 @@ const certificates = [
 
 export default function CertificatesPage() {
   return (
-    <div className="cert-page" style={{ paddingTop: 80, paddingBottom: 40 }}>
+    <div className="cert-page" style={{ paddingTop: 80, paddingBottom: 40, position: "relative" }}>
+      <Particle />
       <Container fluid className="certificates-section">
         <div className="cert-inner">
-           <h1 className="project-heading">
+          <Reveal variants={fadeInUp}>
+            <h1 className="project-heading" style={{ textAlign: "center", marginBottom: "30px" }}>
               My <strong className="purple">Certificates</strong>
             </h1>
-          <div className="cert-grid">
-          {certificates.map((c) => (
-            <figure className="cert-card" key={c.id}>
-              {/* clicking thumbnail opens the full-size image in a new tab */}
-              <a href={c.img} target="_blank" rel="noreferrer" className="cert-link">
-                <img src={c.img} alt={c.title} className="cert-thumb" />
-              </a>
-              <figcaption className="cert-info">
-                <div className="cert-title">{c.title}</div>
-                <div className="cert-issuer">{c.issuer}</div>
-                <a
-                  className="cert-verify"
-                  href={c.link}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={`Verify ${c.title} certificate`}
-                >
-                  <svg
-                    className="cert-verify-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                    <path d="M5 5h5v2H7v10h10v-3h2v5H5z" />
-                  </svg>
-                  <span>Verify</span>
+          </Reveal>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer(0.06, 0.1)}
+            className="cert-grid"
+          >
+            {certificates.map((c) => (
+              <motion.figure
+                className="cert-card"
+                key={c.id}
+                variants={popScale}
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 15px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(30, 144, 255, 0.3)",
+                  borderColor: "rgba(30, 144, 255, 0.6)",
+                }}
+                transition={{ type: "spring", stiffness: 350, damping: 20 }}
+              >
+                <a href={c.img} target="_blank" rel="noreferrer" className="cert-link">
+                  <img src={c.img} alt={c.title} className="cert-thumb" />
                 </a>
-              </figcaption>
-            </figure>
-          ))}
-          </div>
+                <figcaption className="cert-info">
+                  <div className="cert-title">{c.title}</div>
+                  <div className="cert-issuer">{c.issuer}</div>
+                  <motion.a
+                    className="cert-verify"
+                    href={c.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={`Verify ${c.title} certificate`}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.94 }}
+                  >
+                    <svg
+                      className="cert-verify-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                      <path d="M5 5h5v2H7v10h10v-3h2v5H5z" />
+                    </svg>
+                    <span>Verify</span>
+                  </motion.a>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </motion.div>
         </div>
       </Container>
     </div>

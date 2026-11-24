@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -28,12 +29,18 @@ function NavBar() {
   window.addEventListener("scroll", scrollHandler);
 
   return (
-    <Navbar
-      expanded={expand}
-      fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
+    <motion.div
+      initial={{ y: -70, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      style={{ position: "relative", zIndex: 1030 }}
     >
+      <Navbar
+        expanded={expand}
+        fixed="top"
+        expand="md"
+        className={navColour ? "sticky" : "navbar"}
+      >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
@@ -102,6 +109,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </motion.div>
   );
 }
 
